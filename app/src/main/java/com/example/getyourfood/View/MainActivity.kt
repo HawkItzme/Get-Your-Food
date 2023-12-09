@@ -1,17 +1,11 @@
-package com.example.getyourfood
+package com.example.getyourfood.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.getyourfood.R
 import com.example.getyourfood.databinding.ActivityMainBinding
-import com.example.getyourfood.model.Business
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.getyourfood.model
+package com.example.getyourfood.data.model
 
 data class Business(
     val categories: List<Category>,

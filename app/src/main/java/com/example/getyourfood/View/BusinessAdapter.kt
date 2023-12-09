@@ -1,17 +1,17 @@
-package com.example.getyourfood
+package com.example.getyourfood.View
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.getyourfood.R
 import com.example.getyourfood.databinding.ItemBusinessBinding
-import com.example.getyourfood.model.Business
+import com.example.getyourfood.data.model.Business
 
 class BusinessAdapter(
-                      private val businesses: List<Business>,
-                      private val onItemClick: (Business) -> Unit
+    private val businesses: List<Business>,
+    private val onItemClick: (Business) -> Unit
 ) : RecyclerView.Adapter<BusinessAdapter.BusinessViewHolder>() {
 
     inner class BusinessViewHolder(val binding : ItemBusinessBinding) : RecyclerView.ViewHolder(binding.root) {

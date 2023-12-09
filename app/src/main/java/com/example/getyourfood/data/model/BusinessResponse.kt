@@ -1,4 +1,4 @@
-package com.example.getyourfood.model
+package com.example.getyourfood.data.model
 
 data class BusinessResponse(
     val businesses: List<Business>,

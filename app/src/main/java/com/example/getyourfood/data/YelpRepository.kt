@@ -1,6 +1,7 @@
-package com.example.getyourfood
+package com.example.getyourfood.data
 
-import com.example.getyourfood.model.BusinessResponse
+import com.example.getyourfood.data.model.BusinessResponse
+import com.example.getyourfood.data.remote.YelpApiService
 import retrofit2.Response
 
 class YelpRepository(private val apiService: YelpApiService) {
