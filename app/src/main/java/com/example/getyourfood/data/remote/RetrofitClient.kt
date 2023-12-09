@@ -1,4 +1,4 @@
-package com.example.getyourfood
+package com.example.getyourfood.data.remote
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

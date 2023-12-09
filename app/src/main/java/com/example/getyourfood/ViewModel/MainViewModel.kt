@@ -1,11 +1,14 @@
-package com.example.getyourfood
+package com.example.getyourfood.ViewModel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.getyourfood.model.Business
+import com.example.getyourfood.data.YelpRepository
+import com.example.getyourfood.data.model.Business
+import com.example.getyourfood.data.remote.RetrofitClient
+import com.example.getyourfood.data.remote.YelpApiService
 import kotlinx.coroutines.launch
 
 class MainViewModel() : ViewModel() {

@@ -1,6 +1,6 @@
-package com.example.getyourfood
+package com.example.getyourfood.data.remote
 
-import com.example.getyourfood.model.BusinessResponse
+import com.example.getyourfood.data.model.BusinessResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

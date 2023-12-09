@@ -1,4 +1,4 @@
-package com.example.getyourfood
+package com.example.getyourfood.View
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
