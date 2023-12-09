@@ -5,17 +5,22 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.getyourfood.databinding.ItemBusinessBinding
 import com.example.getyourfood.model.Business
 
-class BusinessAdapter(private val context: Context,
-                      private val businesses: List<Business>
+class BusinessAdapter(
+                      private val businesses: List<Business>,
+                      private val onItemClick: (Business) -> Unit
 ) : RecyclerView.Adapter<BusinessAdapter.BusinessViewHolder>() {
 
     inner class BusinessViewHolder(val binding : ItemBusinessBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item : Business){
             binding.locationTV.text = item.location.address1
             binding.nameTV.text = item.name
+            Glide.with(binding.picIV.context)
+                .load(item.image_url)
+                .into(binding.picIV)
         }
     }
 
@@ -36,6 +41,10 @@ class BusinessAdapter(private val context: Context,
 
     override fun onBindViewHolder(holder: BusinessViewHolder, position: Int) {
         holder.bind(businesses[position])
+
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(businesses[position])
+        }
     }
 
 }
