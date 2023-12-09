@@ -8,14 +8,15 @@ import androidx.lifecycle.viewModelScope
 import com.example.getyourfood.model.Business
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val repository: YelpRepository) : ViewModel() {
+class MainViewModel() : ViewModel() {
     private val _pizzaList = MutableLiveData<List<Business>>()
     val pizzaList: LiveData<List<Business>> get() = _pizzaList
 
     private val _juiceList = MutableLiveData<List<Business>>()
     val juiceList: LiveData<List<Business>> get() = _juiceList
 
-
+    val apiService = RetrofitClient.createService(YelpApiService::class.java)
+    val repository = YelpRepository(apiService)
     fun searchPizza(latitude: Double, longitude: Double) {
         viewModelScope.launch {
             try {
